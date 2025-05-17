@@ -1,0 +1,39 @@
+{
+  "name": "Save Restricted Bot",
+  "description": "A Telegram Bot to send restricted content by its post link with login feature.",
+  "repository": "https://github.com/BeastBots/SaveRestrictedContent",
+  "logo": "https://i.postimg.cc/BbG2p8yq/Chat-GPT-Image-May-17-2025-11-17-25-AM.png",
+  "keywords": ["telegram", "bot", "restricted-content"],
+  "env": {
+    "API_HASH": {
+      "description": "Your API Hash from Telegram Website",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Your API ID from Telegram Website",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Bot Token from BotFather",
+      "required": true
+    },
+    "ADMINS": {
+      "description": "Your Admin ID for broadcasting messages",
+      "required": true
+    },
+    "DB_URI": {
+      "description": "Your MongoDB Database URI",
+      "required": true
+    },
+    "ERROR_MESSAGE": {
+      "description": "Set True or False to enable or disable error messages",
+      "required": false,
+      "value": "True"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
