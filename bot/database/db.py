@@ -1,9 +1,9 @@
-from pymongo import AsyncMongoClient
+from motor.motor_asyncio import AsyncIOMotorClient
 from config import DB_NAME, DB_URI
 
 class Database:
     def __init__(self, uri, database_name):
-        self._client = AsyncMongoClient(uri)
+        self._client = AsyncIOMotorClient(uri)
         self.db = self._client[database_name]
         self.col = self.db.users
 
